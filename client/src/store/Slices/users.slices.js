@@ -25,6 +25,9 @@ const handleApiResponse = (response) => {
 const signup = createAsyncThunk('users/signup', async (user) => {
     try {
         const response = await api.post(`/users/registration`, user);
+        if (response.data.status === "Failed") {
+            throw Error(response.data.message)
+        }
         handleApiResponse(response);
         return response.data;
     } catch (error) {
@@ -35,6 +38,9 @@ const signup = createAsyncThunk('users/signup', async (user) => {
 const login = createAsyncThunk('users/login', async (user) => {
     try {
         const response = await api.post(`/users/login`, user);
+        if (response.data.status === "Failed") {
+            throw Error(response.data.message)
+        }
         handleApiResponse(response);
         return response.data;
     } catch (error) {
