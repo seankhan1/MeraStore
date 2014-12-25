@@ -38,7 +38,7 @@ api.interceptors.response.use(
 
                 try {
                     const refreshToken = jsCookie.get('refreshToken');
-                    const response = await axios.post("http://localhost:8000/api/users/refresh-token", {
+                    const response = await axios.post(`${API}/users/refresh-token`, {
                         refreshToken: refreshToken
                     });
                     const { accessToken } = response.data;
