@@ -117,7 +117,7 @@ export default function Features() {
     <>
       <Navbar />
       {error.isAlert && <AlertComponent status={error.status} message={error.message} />}
-      {(isError) && (<Spinner color="blue" className="h-16 w-16 m-auto relative top-10" />)}
+      {(isPending) && (<Spinner color="blue" className="h-16 w-16 m-auto relative top-10" />)}
       <div>
         {!isError && <div className="max-w-[1400px] m-auto p-4">
           <div className="flex flex-col xl:flex-row justify-between items-start gap-8">
@@ -138,7 +138,7 @@ export default function Features() {
                       <ItemRow items={items} index={index} key={index} />
                     ))}
                   </tbody>
-                </table>
+                </table>  
               </div>
             </div>
 
