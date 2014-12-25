@@ -27,7 +27,7 @@ export default function Orders() {
                                 <div className="flex gap-8 py-4 flex-wrap">
                                     <p><span className="font-bold">Date of Order</span> <br />{date}</p>
                                     <p><span className="font-bold">Total Cost</span> <br /> ${order.totalAmount}</p>
-                                    <p><span className="font-bold">Delivery Status</span> <br /> {order.orderStatus}</p>
+                                    {/* <p><span className="font-bold">Delivery Status</span> <br /> {order.orderStatus}</p> */}
                                 </div>
                                 <p className="pt-4 font-bold text-xl">Order Items:</p>
                                 <div className="flex mb-2 gap-2 flex-wrap ">
