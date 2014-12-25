@@ -5,10 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "install": "npm i express dotenv cors mongoose jsonwebtoken bcrypt axios express-validator cookie-parser nodemailer razorpay",
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev": "nodemon index.js"
   },
   "author": "Vaibhav Maurya (vibhu.astute@gmail.com)",
   "license": "MIT",
