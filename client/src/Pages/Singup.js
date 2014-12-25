@@ -58,10 +58,6 @@ export default function Signup() {
                     <input required type="email" placeholder='xyz@gmail.com' name="email" className='outline-none border-none w-[15rem] text-sm bg-blue-50' value={details.email} onChange={(e) => handleOnChangeg(e)} />
                     <input required type="password" placeholder='Password' name='password' className='outline-none border-none w-[15rem] text-sm bg-blue-50' value={details.password} onChange={(e) => handleOnChangeg(e)} />
                     <input required type="password" placeholder='Confirm Password' name='confirm_password' className='outline-none border-none w-[15rem] text-sm bg-blue-50' value={details.confirm_password} onChange={(e) => handleOnChangeg(e)} />
-                    <div className='flex gap-2 items-center'>
-                        <input type="checkbox" name="admin" id="role" onChange={(e) => handleOnChangeg(e)} />
-                        <label htmlFor="role">Admin</label>
-                    </div>
                     <button type='submit' className='bg-blue-500 text-white px-10 text-sm py-2 rounded-full hover:bg-blue-400 hover:shadow-sm hover:shadow-blue-800'>SIGN UP</button>
                 </form>
             </div>

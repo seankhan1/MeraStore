@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { deleteWishlist } from "../../store/Slices/wishlist.slice";
 import { Spinner } from "@material-tailwind/react";
 import { addCart, fetchCart } from "../../store/Slices/cart.slice";
+import { useEffect } from "react";
 
 export default function Wishlist(props) {
     const { wish, isPending, isError } = useSelector(
@@ -14,6 +15,10 @@ export default function Wishlist(props) {
     const handleDeleteFromWishlist = (productId) => {
         dispatch(deleteWishlist(productId));
     };
+
+    useEffect(() => {   
+        dispatch(fetchCart())
+    }, [dispatch])
 
     return (
         <div className="fixed top-0 left-0 w-[100vw] h-[100vh] bg-[#00000050] z-40">
@@ -68,7 +73,7 @@ export default function Wishlist(props) {
                                             ${product.price}
                                             <button
                                                 className="bg-[#222] text-white text-xs px-4 py-2 rounded-full hover:shadow-md hover:shadow-blue-300 hover:bg-blue-500"
-                                                onClick={() => dispatch(addCart({ product_id: product._id, quantity: 1 })).then(dispatch(fetchCart()))}
+                                                onClick={() => dispatch(addCart({ product_id: product._id, quantity: 1 }))}
                                             >
                                                 ADD TO CART
                                             </button>
