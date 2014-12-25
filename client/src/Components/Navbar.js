@@ -71,11 +71,11 @@ export default function Navbar() {
                                         About
                                     </Link>
                                 </li>
-                                {isLogedIn && <li className="">
+                                {/* {isLogedIn && <li className="">
                                     <Link to="/admin-panel">
                                         Admin Panel
                                     </Link>
-                                </li>}
+                                </li>} */}
                             </ul>
                         </nav>
                     </div>
