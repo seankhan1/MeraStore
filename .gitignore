@@ -1,0 +1,14 @@
+# Node.js
+/node_modules
+/server/node_modules
+/client/node_modules
+.pnp*
+coverage
+/build
+
+# Miscellaneous
+.DS_Store
+.env*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,17 @@
+{
+  "name": "mera-store",
+  "version": "1.0.0",
+  "description": "A Node.js e-commerce platform for \"mera store,\" designed to manage and sell a wide range of products online. This project includes features for user authentication, product catalog, shopping cart, and secure payment processing.",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run start",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vibhu.astute@gmail.com (github: vaibhav-xt)",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

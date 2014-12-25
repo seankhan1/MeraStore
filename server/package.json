@@ -1,0 +1,31 @@
+{
+  "name": "mera-store-backend",
+  "version": "1.0.0",
+  "description": "MERN Stack Application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "install": "npm i express dotenv cors mongoose jsonwebtoken bcrypt axios express-validator cookie-parser nodemailer razorpay",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Vaibhav Maurya (vibhu.astute@gmail.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "nodemailer": "^6.9.6",
+    "razorpay": "^2.9.2"
+  }
+}
